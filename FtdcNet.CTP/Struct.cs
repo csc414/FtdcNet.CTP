@@ -26320,4 +26320,223 @@ namespace CTP
 
     };
 
+    /// <summary>
+    /// 投资者风险结算持仓查询
+    /// </summary>
+    [StructLayout(LayoutKind.Sequential)]
+    public class ThostFtdcQryRiskSettleInvstPositionField
+    {
+        /// <summary>
+        /// 经纪公司代码
+        /// </summary>
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 11)]
+        public string BrokerID;
+        /// <summary>
+        /// 投资者代码
+        /// </summary>
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 13)]
+        public string InvestorID;
+        /// <summary>
+        /// 合约代码
+        /// </summary>
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 81)]
+        public string InstrumentID;
+    };
+
+    /// <summary>
+    /// 风险结算产品查询
+    /// </summary>
+    [StructLayout(LayoutKind.Sequential)]
+    public class ThostFtdcQryRiskSettleProductStatusField
+    {
+        /// <summary>
+        /// 产品代码
+        /// </summary>
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 81)]
+        public string ProductID;
+    };
+
+    /// <summary>
+    /// SPBM期货合约保证金参数查询
+    /// </summary>
+    [StructLayout(LayoutKind.Sequential)]
+    public class ThostFtdcQrySPBMFutureParameterField
+    {
+        /// <summary>
+        /// 交易所代码
+        /// </summary>
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 9)]
+        public string ExchangeID;
+        /// <summary>
+        /// 合约代码
+        /// </summary>
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 81)]
+        public string InstrumentID;
+        /// <summary>
+        /// 品种代码
+        /// </summary>
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 81)]
+        public string ProdFamilyCode;
+    };
+
+    /// <summary>
+    /// SPBM期权合约保证金参数查询
+    /// </summary>
+    [StructLayout(LayoutKind.Sequential)]
+    public class ThostFtdcQrySPBMOptionParameterField
+    {
+        /// <summary>
+        /// 交易所代码
+        /// </summary>
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 9)]
+        public string ExchangeID;
+        /// <summary>
+        /// 合约代码
+        /// </summary>
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 81)]
+        public string InstrumentID;
+        /// <summary>
+        /// 品种代码
+        /// </summary>
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 81)]
+        public string ProdFamilyCode;
+    };
+
+    /// <summary>
+    /// SPBM品种内对锁仓折扣参数查询
+    /// </summary>
+    [StructLayout(LayoutKind.Sequential)]
+    public class ThostFtdcQrySPBMIntraParameterField
+    {
+        /// <summary>
+        /// 交易所代码
+        /// </summary>
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 9)]
+        public string ExchangeID;
+        /// <summary>
+        /// 品种代码
+        /// </summary>
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 81)]
+        public string ProdFamilyCode;
+    };
+
+    /// <summary>
+    /// SPBM跨品种抵扣参数查询
+    /// </summary>
+    [StructLayout(LayoutKind.Sequential)]
+    public class ThostFtdcQrySPBMInterParameterField
+    {
+        /// <summary>
+        /// 交易所代码
+        /// </summary>
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 9)]
+        public string ExchangeID;
+        /// <summary>
+        /// 第一腿构成品种
+        /// </summary>
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 81)]
+        public string Leg1ProdFamilyCode;
+        /// <summary>
+        /// 第二腿构成品种
+        /// </summary>
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 81)]
+        public string Leg2ProdFamilyCode;
+    };
+
+    /// <summary>
+    /// 组合保证金套餐查询
+    /// </summary>
+    [StructLayout(LayoutKind.Sequential)]
+    public class ThostFtdcQrySPBMPortfDefinitionField
+    {
+        /// <summary>
+        /// 交易所代码
+        /// </summary>
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 9)]
+        public string ExchangeID;
+        /// <summary>
+        /// 组合保证金套餐代码
+        /// </summary>
+        public int PortfolioDefID;
+        /// <summary>
+        /// 品种代码
+        /// </summary>
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 81)]
+        public string ProdFamilyCode;
+    };
+
+    /// <summary>
+    /// 投资者套餐选择查询
+    /// </summary>
+    [StructLayout(LayoutKind.Sequential)]
+    public class ThostFtdcQrySPBMInvestorPortfDefField
+    {
+        /// <summary>
+        /// 交易所代码
+        /// </summary>
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 9)]
+        public string ExchangeID;
+        /// <summary>
+        /// 经纪公司代码
+        /// </summary>
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 11)]
+        public string BrokerID;
+        /// <summary>
+        /// 投资者代码
+        /// </summary>
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 13)]
+        public string InvestorID;
+    };
+
+    /// <summary>
+    /// 投资者新型组合保证金系数查询
+    /// </summary>
+    [StructLayout(LayoutKind.Sequential)]
+    public class ThostFtdcQryInvestorPortfMarginRatioField
+    {
+        /// <summary>
+        /// 经纪公司代码
+        /// </summary>
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 11)]
+        public string BrokerID;
+        /// <summary>
+        /// 投资者代码
+        /// </summary>
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 13)]
+        public string InvestorID;
+        /// <summary>
+        /// 交易所代码
+        /// </summary>
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 9)]
+        public string ExchangeID;
+    };
+
+    /// <summary>
+    /// 投资者产品SPBM明细查询
+    /// </summary>
+    [StructLayout(LayoutKind.Sequential)]
+    public class ThostFtdcQryInvestorProdSPBMDetailField
+    {
+        /// <summary>
+        /// 交易所代码
+        /// </summary>
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 9)]
+        public string ExchangeID;
+        /// <summary>
+        /// 经纪公司代码
+        /// </summary>
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 11)]
+        public string BrokerID;
+        /// <summary>
+        /// 投资者代码
+        /// </summary>
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 13)]
+        public string InvestorID;
+        /// <summary>
+        /// 品种代码
+        /// </summary>
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 81)]
+        public string ProdFamilyCode;
+    };
+
 }; // end of namespace

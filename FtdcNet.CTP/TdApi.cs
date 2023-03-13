@@ -862,6 +862,62 @@ namespace CTP
         }
 
         /// <summary>
+        /// SPBM期货合约参数查询
+        /// </summary>
+        public int ReqQrySPBMFutureParameter(ThostFtdcQrySPBMFutureParameterField pQrySPBMFutureParameter, int nRequestID)
+        {
+            return Interop.TdReqQrySPBMFutureParameter(Handle, pQrySPBMFutureParameter, nRequestID);
+        }
+
+        /// <summary>
+        /// SPBM期权合约参数查询
+        /// </summary>
+        public int ReqQrySPBMOptionParameter(ThostFtdcQrySPBMOptionParameterField pQrySPBMOptionParameter, int nRequestID)
+        {
+            return Interop.TdReqQrySPBMOptionParameter(Handle, pQrySPBMOptionParameter, nRequestID);
+        }
+
+        /// <summary>
+        /// SPBM品种内对锁仓折扣参数查询
+        /// </summary>
+        public int ReqQrySPBMIntraParameter(ThostFtdcQrySPBMIntraParameterField pQrySPBMIntraParameter, int nRequestID)
+        {
+            return Interop.TdReqQrySPBMIntraParameter(Handle, pQrySPBMIntraParameter, nRequestID);
+        }
+
+        /// <summary>
+        /// SPBM跨品种抵扣参数查询
+        /// </summary>
+        public int ReqQrySPBMInterParameter(ThostFtdcQrySPBMInterParameterField pQrySPBMInterParameter, int nRequestID)
+        {
+            return Interop.TdReqQrySPBMInterParameter(Handle, pQrySPBMInterParameter, nRequestID);
+        }
+
+        /// <summary>
+        /// SPBM组合保证金套餐查询
+        /// </summary>
+        public int ReqQrySPBMPortfDefinition(ThostFtdcQrySPBMPortfDefinitionField pQrySPBMPortfDefinition, int nRequestID)
+        {
+            return Interop.TdReqQrySPBMPortfDefinition(Handle, pQrySPBMPortfDefinition, nRequestID);
+        }
+
+        /// <summary>
+        /// 投资者SPBM套餐选择查询
+        /// </summary>
+        public int ReqQrySPBMInvestorPortfDef(ThostFtdcQrySPBMInvestorPortfDefField pQrySPBMInvestorPortfDef, int nRequestID)
+        {
+            return Interop.TdReqQrySPBMInvestorPortfDef(Handle, pQrySPBMInvestorPortfDef, nRequestID);
+        }
+
+        /// <summary>
+        /// 投资者新型组合保证金系数查询
+        /// </summary>
+        public int ReqQryInvestorPortfMarginRatio(ThostFtdcQryInvestorPortfMarginRatioField pQryInvestorPortfMarginRatio, int nRequestID)
+        {
+            return Interop.TdReqQryInvestorPortfMarginRatio(Handle, pQryInvestorPortfMarginRatio, nRequestID);
+        }
+
+        /// <summary>
         /// 处理所有的OnErrRtn****回调事件
         /// </summary>
         protected void CbOnErrRtnFunc(IntPtr pObject, EnumOnErrRtnType type, IntPtr pParam, ThostFtdcRspInfoField pRspInfo)

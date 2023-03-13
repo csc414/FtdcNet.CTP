@@ -467,6 +467,46 @@ namespace CTP
         ///请求组合优惠比例响应, ThostFtdcCombPromotionParamField
         /// </summary>
         OnRspQryCombPromotionParam,
+        /// <summary>
+        /// 投资者风险结算持仓查询响应
+        /// </summary>
+        OnRspQryRiskSettleInvstPosition,
+        /// <summary>
+        /// 风险结算产品查询响应
+        /// </summary>
+        OnRspQryRiskSettleProductStatus,
+        /// <summary>
+        /// SPBM期货合约参数查询响应
+        /// </summary>
+        OnRspQrySPBMFutureParameter,
+        /// <summary>
+        /// SPBM期权合约参数查询响应
+        /// </summary>
+        OnRspQrySPBMOptionParameter,
+        /// <summary>
+        /// SPBM品种内对锁仓折扣参数查询响应
+        /// </summary>
+        OnRspQrySPBMIntraParameter,
+        /// <summary>
+        /// SPBM跨品种抵扣参数查询响应
+        /// </summary>
+        OnRspQrySPBMInterParameter,
+        /// <summary>
+        /// SPBM组合保证金套餐查询响应
+        /// </summary>
+        OnRspQrySPBMPortfDefinition,
+        /// <summary>
+        /// 投资者SPBM套餐选择查询响应
+        /// </summary>
+        OnRspQrySPBMInvestorPortfDef,
+        /// <summary>
+        /// 投资者新型组合保证金系数查询响应
+        /// </summary>
+        OnRspQryInvestorPortfMarginRatio,
+        /// <summary>
+        /// 投资者产品SPBM明细查询响应
+        /// </summary>
+        OnRspQryInvestorProdSPBMDetail
     };
 
     /// <summary>

@@ -423,6 +423,34 @@ namespace CTP
         [DllImport("ftdc2c_ctp", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.StdCall)]
         public static extern int TdReqQryCombPromotionParam(IntPtr pApi, ThostFtdcQryCombPromotionParamField pQryCombPromotionParam, int nRequestID);
 
+        [DllImport("ftdc2c_ctp", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.StdCall)]
+        public static extern int TdReqQryRiskSettleInvstPosition(IntPtr pApi, ThostFtdcQryRiskSettleInvstPositionField pQryRiskSettleInvstPosition, int nRequestID);
 
+        [DllImport("ftdc2c_ctp", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.StdCall)]
+        public static extern int TdReqQryRiskSettleProductStatus(IntPtr pApi, ThostFtdcQryRiskSettleProductStatusField pQryRiskSettleProductStatus, int nRequestID);
+
+        [DllImport("ftdc2c_ctp", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.StdCall)]
+        public static extern int TdReqQrySPBMFutureParameter(IntPtr pApi, ThostFtdcQrySPBMFutureParameterField pQrySPBMFutureParameter, int nRequestID);
+
+        [DllImport("ftdc2c_ctp", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.StdCall)]
+        public static extern int TdReqQrySPBMOptionParameter(IntPtr pApi, ThostFtdcQrySPBMOptionParameterField pQrySPBMOptionParameter, int nRequestID);
+
+        [DllImport("ftdc2c_ctp", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.StdCall)]
+        public static extern int TdReqQrySPBMIntraParameter(IntPtr pApi, ThostFtdcQrySPBMIntraParameterField pQrySPBMIntraParameter, int nRequestID);
+
+        [DllImport("ftdc2c_ctp", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.StdCall)]
+        public static extern int TdReqQrySPBMInterParameter(IntPtr pApi, ThostFtdcQrySPBMInterParameterField pQrySPBMInterParameter, int nRequestID);
+
+        [DllImport("ftdc2c_ctp", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.StdCall)]
+        public static extern int TdReqQrySPBMPortfDefinition(IntPtr pApi, ThostFtdcQrySPBMPortfDefinitionField pQrySPBMPortfDefinition, int nRequestID);
+
+        [DllImport("ftdc2c_ctp", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.StdCall)]
+        public static extern int TdReqQrySPBMInvestorPortfDef(IntPtr pApi, ThostFtdcQrySPBMInvestorPortfDefField pQrySPBMInvestorPortfDef, int nRequestID);
+
+        [DllImport("ftdc2c_ctp", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.StdCall)]
+        public static extern int TdReqQryInvestorPortfMarginRatio(IntPtr pApi, ThostFtdcQryInvestorPortfMarginRatioField pQryInvestorPortfMarginRatio, int nRequestID);
+
+        [DllImport("ftdc2c_ctp", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.StdCall)]
+        public static extern int TdReqQryInvestorProdSPBMDetail(IntPtr pApi, ThostFtdcQryInvestorProdSPBMDetailField pQryInvestorProdSPBMDetail, int nRequestID);
     }
 }
