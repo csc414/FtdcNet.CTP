@@ -8095,4 +8095,78 @@ namespace CTP
         UNTRADE = (byte)'2'
     };
 
+    /// <summary>
+    /// TFtdcOpenLimitControlLevelType是一个开仓量限制粒度类型
+    /// </summary>
+    public enum EnumOpenLimitControlLevelType : byte
+    {
+        /// <summary>
+        /// 不控制
+        /// </summary>
+        None = (byte)'0',
+
+        /// <summary>
+        /// 产品级别
+        /// </summary>
+        Product = (byte)'1',
+
+        /// <summary>
+        /// 合约级别
+        /// </summary>
+        Inst = (byte)'2'
+    }
+
+    /// <summary>
+    /// TFtdcOrderFreqControlLevelType是一个报单频率控制粒度类型
+    /// </summary>
+    public enum EnumOrderFreqControlLevelType : byte
+    {
+        /// <summary>
+        /// 不控制
+        /// </summary>
+        None = (byte)'0',
+
+        /// <summary>
+        /// 产品级别
+        /// </summary>
+        Product = (byte)'1',
+
+        /// <summary>
+        /// 合约级别
+        /// </summary>
+        Inst = (byte)'2'
+    }
+
+    /// <summary>
+    /// TFtdcOrderCancelAlgType是一个撤单时选择席位算法类型
+    /// </summary>
+    public enum EnumOrderCancelAlgType : byte
+    {
+        /// <summary>
+        /// 轮询席位撤单
+        /// </summary>
+        Balance = (byte)'1',
+
+        /// <summary>
+        /// 优先原报单席位撤单
+        /// </summary>
+        OrigFirst = (byte)'2'
+    }
+
+    /// <summary>
+    /// TFtdcEnumBoolType是一个枚举bool类型类型
+    /// </summary>
+    public enum EnumBoolType : byte
+    {
+        /// <summary>
+        /// false
+        /// </summary>
+        False = (byte)'0',
+
+        /// <summary>
+        /// true
+        /// </summary>
+        True = (byte)'1'
+    }
+
 }; // end of namespace

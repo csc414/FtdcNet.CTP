@@ -39,7 +39,6 @@ namespace Demo
         void DataApi_OnRtnEvent(object sender, OnRtnEventArgs e)
         {
             Console.WriteLine("DataApi_OnRtnEvent " + e.EventType.ToString());
-
             var fld = Conv.P2S<ThostFtdcDepthMarketDataField>(e.Param);
 
             Console.WriteLine("{0}.{1:D3} {2} {3}", fld.UpdateTime, fld.UpdateMillisec, fld.InstrumentID, fld.LastPrice);
@@ -81,7 +80,7 @@ namespace Demo
                         req.BrokerID = this.txtBrokerID.Text;
                         req.UserID = this.txtUserID.Text;
                         req.Password = this.txtPasswd.Text;
-                        int iResult = DataApi.ReqUserLogin(req, ++iRequestID);
+                        int iResult = DataApi.ReqUserLogin(req, iRequestID++);
                     }
                     break;
             }
@@ -224,7 +223,7 @@ namespace Demo
                         ThostFtdcSettlementInfoConfirmField req = new ThostFtdcSettlementInfoConfirmField();
                         req.BrokerID = this.txtBrokerID.Text;
                         req.InvestorID = this.txtUserID.Text;
-                        TraderApi.ReqSettlementInfoConfirm(req, ++this.iRequestID);
+                        TraderApi.ReqSettlementInfoConfirm(req, iRequestID++);
                     }
                     break;
                 case EnumOnRspType.OnRspQryInstrument:
@@ -258,7 +257,7 @@ namespace Demo
                             req.AppID = txtAppID.Text;
                             req.AuthCode = txtAuthCode.Text;
 
-                            TraderApi.ReqAuthenticate(req, ++iRequestID);
+                            TraderApi.ReqAuthenticate(req, iRequestID++);
                         }
                         else
                         {
@@ -286,7 +285,7 @@ namespace Demo
                 var req = new ThostFtdcQryInstrumentField();
                 req.InstrumentID = "";
                 req.ExchangeID = "";
-                TraderApi.ReqQryInstrument(req, ++this.iRequestID);
+                TraderApi.ReqQryInstrument(req, this.iRequestID++);
             }
         }
 
@@ -320,7 +319,7 @@ namespace Demo
             req.BrokerID = this.txtBrokerID.Text;
             req.UserID = this.txtUserID.Text;
             req.Password = this.txtPasswd.Text;
-            int iResult = TraderApi.ReqUserLogin(req, ++iRequestID);
+            int iResult = TraderApi.ReqUserLogin(req, iRequestID++);
         }
 
         void RegSystemInfo()
@@ -419,7 +418,7 @@ namespace Demo
                 var req = new ThostFtdcQryDepthMarketDataField();
                 req.InstrumentID = txtQryMktData.Text;
                 req.ExchangeID = "";
-                TraderApi.ReqQryDepthMarketData(req, ++this.iRequestID);
+                var a = TraderApi.ReqQryDepthMarketData(req, iRequestID++);
             }
         }
     }

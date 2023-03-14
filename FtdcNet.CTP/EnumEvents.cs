@@ -16,10 +16,6 @@ namespace CTP
     public enum EnumOnErrRtnType
     {
         /// <summary>
-        /// 未使用,保留
-        /// </summary>
-        None,
-        /// <summary>
         ///报单录入错误回报, ThostFtdcInputOrderField
         /// </summary>
         OnErrRtnOrderInsert,
@@ -91,10 +87,6 @@ namespace CTP
     public enum EnumOnFrontType
     {
         /// <summary>
-        /// 未使用,保留
-        /// </summary>
-        None,
-        /// <summary>
         ///当客户端与交易后台建立起通信连接时（还未登录前），该方法被调用。
         /// </summary>
         OnFrontConnected,
@@ -115,10 +107,6 @@ namespace CTP
     /// </summary>
     public enum EnumOnRspType
     {
-        /// <summary>
-        /// 未使用,保留
-        /// </summary>
-        None,
         /// <summary>
         ///登录请求响应, ThostFtdcRspUserLoginField
         /// </summary>
@@ -514,10 +502,6 @@ namespace CTP
     /// </summary>
     public enum EnumOnRtnType
     {
-        /// <summary>
-        /// 未使用,保留
-        /// </summary>
-        None,
         /// <summary>
         ///深度行情通知, ThostFtdcDepthMarketDataField
         /// </summary>

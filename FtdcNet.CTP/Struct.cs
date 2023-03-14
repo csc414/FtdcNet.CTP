@@ -208,6 +208,17 @@ namespace CTP
         [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 9)]
         public string INETime;
 
+        /// <summary>
+        /// 后台版本信息
+        /// </summary>
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 41)]
+        public string SysVersion;
+
+        /// <summary>
+        /// 广期所时间
+        /// </summary>
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 9)]
+        public string GFEXTime;
     };
 
     /// <summary>
@@ -1057,6 +1068,15 @@ namespace CTP
         [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 81)]
         public string ExchangeProductID;
 
+        /// <summary>
+        /// 开仓量限制粒度
+        /// </summary>
+        public EnumOpenLimitControlLevelType OpenLimitControlLevel;
+
+        /// <summary>
+        /// 报单频率控制粒度
+        /// </summary>
+        public EnumOrderFreqControlLevelType OrderFreqControlLevel;
     };
 
     /// <summary>
@@ -1329,6 +1349,10 @@ namespace CTP
         [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 11)]
         public string BrokerID;
 
+        /// <summary>
+        /// 撤单时选择席位算法
+        /// </summary>
+        public EnumOrderCancelAlgType OrderCancelAlg;
     };
 
     /// <summary>
@@ -1413,6 +1437,15 @@ namespace CTP
         [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 13)]
         public string MarginModelID;
 
+        /// <summary>
+        /// 是否频率控制
+        /// </summary>
+        public EnumBoolType IsOrderFreq;
+
+        /// <summary>
+        /// 是否开仓限制
+        /// </summary>
+        public EnumBoolType IsOpenVolLimit;
     };
 
     /// <summary>
@@ -2081,7 +2114,7 @@ namespace CTP
         public string InvestUnitID;
 
         /// <summary>
-        /// 大商所持仓成本差值，只有大商所使用
+        /// 持仓成本差值
         /// </summary>
         public double PositionCostOffset;
 
@@ -2510,6 +2543,15 @@ namespace CTP
         [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 81)]
         public string ExchangeInstID;
 
+        /// <summary>
+        /// 上带价
+        /// </summary>
+        public double BandingUpperPrice;
+
+        /// <summary>
+        /// 下带价
+        /// </summary>
+        public double BandingLowerPrice;
     };
 
     /// <summary>
@@ -2793,6 +2835,10 @@ namespace CTP
         [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 7)]
         public string MaxOrderMessageReference;
 
+        /// <summary>
+        /// 撤单时选择席位算法
+        /// </summary>
+        public EnumOrderCancelAlgType OrderCancelAlg;
     };
 
     /// <summary>
@@ -3126,7 +3172,7 @@ namespace CTP
     public class ThostFtdcCurrentTimeField
     {
         /// <summary>
-        /// 当前日期
+        /// 当前交易日
         /// </summary>
         [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 9)]
         public string CurrDate;
@@ -3143,7 +3189,7 @@ namespace CTP
         public int CurrMillisec;
 
         /// <summary>
-        /// 业务日期
+        /// 自然日期
         /// </summary>
         [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 9)]
         public string ActionDay;
@@ -5446,6 +5492,16 @@ namespace CTP
         [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 4)]
         public string CurrencyID;
 
+        /// <summary>
+        /// 是否是个股期权内转
+        /// </summary>
+        public int IsFromSopt;
+
+        /// <summary>
+        /// 资金密码
+        /// </summary>
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 41)]
+        public string TradingPassword;
     };
 
     /// <summary>
@@ -5587,6 +5643,15 @@ namespace CTP
         [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 13)]
         public string MarginModelID;
 
+        /// <summary>
+        /// 是否频率控制
+        /// </summary>
+        public EnumBoolType IsOrderFreq;
+
+        /// <summary>
+        /// 是否开仓限制
+        /// </summary>
+        public EnumBoolType IsOpenVolLimit;
     };
 
     /// <summary>
@@ -6152,7 +6217,7 @@ namespace CTP
         public string InvestUnitID;
 
         /// <summary>
-        /// 大商所持仓成本差值，只有大商所使用
+        /// 持仓成本差值
         /// </summary>
         public double PositionCostOffset;
 
@@ -9987,6 +10052,11 @@ namespace CTP
         [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 33)]
         public string IPAddress;
 
+        /// <summary>
+        /// 被顶单编号
+        /// </summary>
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 21)]
+        public string ReplaceSysID;
     };
 
     /// <summary>
@@ -10406,6 +10476,11 @@ namespace CTP
         [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 33)]
         public string IPAddress;
 
+        /// <summary>
+        /// 被顶单编号
+        /// </summary>
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 21)]
+        public string ReplaceSysID;
     };
 
     /// <summary>
@@ -12554,6 +12629,15 @@ namespace CTP
         [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 81)]
         public string InstrumentID;
 
+        /// <summary>
+        /// 报单手续费
+        /// </summary>
+        public double OrderCommByTrade;
+
+        /// <summary>
+        /// 撤单手续费
+        /// </summary>
+        public double OrderActionCommByTrade;
     };
 
     /// <summary>
@@ -14480,6 +14564,21 @@ namespace CTP
 
     };
 
+    ///行情上下带价
+    [StructLayout(LayoutKind.Sequential)]
+    public class ThostFtdcMarketDataBandingPriceField
+    {
+        /// <summary>
+        /// 上带价
+        /// </summary>
+        public double BandingUpperPrice;
+
+        /// <summary>
+        /// 下带价
+        /// </summary>
+        public double BandingLowerPrice;
+    };
+
     /// <summary>
     /// 行情交易所代码属性
     /// </summary>
@@ -14944,7 +15043,7 @@ namespace CTP
         public double CloseAmount;
 
         /// <summary>
-        /// 先开先平剩余数量（DCE）
+        /// 先开先平剩余数量
         /// </summary>
         public int TimeFirstVolume;
 
@@ -15123,6 +15222,10 @@ namespace CTP
         [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 7)]
         public string MaxOrderMessageReference;
 
+        /// <summary>
+        /// 撤单时选择席位算法
+        /// </summary>
+        public EnumOrderCancelAlgType OrderCancelAlg;
     };
 
     /// <summary>
@@ -26149,6 +26252,11 @@ namespace CTP
         [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 33)]
         public string ClientPublicIP;
 
+        /// <summary>
+        /// 客户登录备注2
+        /// </summary>
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 151)]
+        public string ClientLoginRemark;
     };
 
     /// <summary>
